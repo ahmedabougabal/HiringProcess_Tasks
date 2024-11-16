@@ -1,0 +1,53 @@
+﻿@model List<Employee>
+
+<div class="dashboard">
+    <div class="report">
+        <h2>Employees with Completed Insurance Papers</h2>
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <td>@employee.Name</td>
+                        <td>@employee.Department.DepartmentName</td>
+                     
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="report">
+        <h2>Employees with Uncompleted Insurance Papers</h2>
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in ViewBag.DashboardUnCompleted)
+                {
+                    <tr>
+                        <td>@employee.Name</td>
+                        <td>@employee.Department.DepartmentName</td>
+                      
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Styles {
+    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
+}
+

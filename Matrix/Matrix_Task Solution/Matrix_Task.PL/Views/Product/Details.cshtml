@@ -1,0 +1,17 @@
+﻿@using MAtrixTask.DAL.Models
+@model Product
+
+@{
+    ViewData["Title"] = " Product Details";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Product Name: @Model.Name</h4>
+
+    <p>Duration: @Model.EndDate</p>
+
+   @*  <p>Category: @Model.Category.Name</p> *@
+</div>
+
+<a asp-action="Index">Back to List</a>

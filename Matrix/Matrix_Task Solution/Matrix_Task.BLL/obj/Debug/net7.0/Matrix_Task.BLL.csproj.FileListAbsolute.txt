@@ -1,0 +1,15 @@
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\bin\Debug\net7.0\Matrix_Task.BLL.deps.json
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\bin\Debug\net7.0\Matrix_Task.BLL.dll
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\bin\Debug\net7.0\Matrix_Task.BLL.pdb
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\bin\Debug\net7.0\Matrix_Task.DAL.dll
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\bin\Debug\net7.0\Matrix_Task.DAL.pdb
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.AssemblyInfo.cs
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.csproj.CopyComplete
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.dll
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\refint\Matrix_Task.BLL.dll
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\Matrix_Task.BLL.pdb
+C:\Users\dell\Desktop\Matrix_Task\Matrix_Task.BLL\obj\Debug\net7.0\ref\Matrix_Task.BLL.dll

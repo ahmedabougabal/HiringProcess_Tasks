@@ -1,0 +1,36 @@
+﻿@using XceedTask.DAL.Models;
+@model Product
+
+<div class="bg-white p-4 rounded-2">
+    <h2>Create</h2>
+
+    <form asp-controller="Product" asp-action="Create" method="post" >
+        <div class="form-group mb-3">
+            <label for="CategoryId" class="mainColor fw-bold">Category</label>
+            <select asp-for="CategoryId" asp-items="ViewBag.category" class="form-control"></select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="Name" class="mainColor fw-bold">Product Name</label>
+            <input type="text" asp-for="Name" class="form-control" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="CreationDate" class="mainColor fw-bold">Creation Date</label>
+            <input type="date" asp-for="CreationDate" class="form-control" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="StartDate" class="mainColor fw-bold">Start Date</label>
+            <input type="date" asp-for="StartDate" class="form-control" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="EndDate" class="mainColor fw-bold">End Date</label>
+            <input type="date" asp-for="EndDate" class="form-control" />
+        </div>
+        <div class="form-group mb-3">
+            <label for="Price" class="mainColor fw-bold">Price</label>
+            <input type="number" asp-for="Price" step="0.10" min="0" placeholder="0.00" class="form-control" />
+        </div>
+     @*    <input type="submit" value="Create" class="btn btn-info" /> *@
+        <button type="submit" class="btn mainbg text-white">Create</button>
+    </form>
+</div>
+

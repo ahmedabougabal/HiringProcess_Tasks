@@ -1,0 +1,57 @@
+﻿@using XceedTask.DAL.Models;
+@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "All Product";
+}
+
+
+<h2 class="text-white">All Product</h2>
+
+<p>
+    <a asp-action="Create" class="btn rounded bg-white mainColor">Create New</a>
+</p>
+
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>End Date</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="text-white">
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.EndDate</td>
+                    <td>@item.Price</td>
+                    <td>@item.Category.Name</td>
+                    <partial name="_ButtonsPartialView" model="@item.Id" />
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="mt-4 alert alert-warning">
+        <h3>
+            There is no Department!!
+        </h3>
+    </div>
+}

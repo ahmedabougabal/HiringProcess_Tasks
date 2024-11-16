@@ -1,0 +1,58 @@
+﻿@using Dr_GreicheTask.PL.ViewModels;
+@model List<InsurancePaper>
+@{
+    ViewData["Title"] = "All Insurance Paper";
+}
+
+
+<h2 class="text-white">Insurance Papers</h2>
+
+<p >
+    <a  asp-action="Create" class="btn rounded bg-white mainColor">Create New</a>
+</p>
+
+<table class="table table-hover">
+    <thead class="text-white">
+        <tr>
+            <th>Employee</th>
+            <th>Employment Contract</th>
+            <th>Q1 Insurances</th>
+            <th>Q1 Insurances Expire Date</th>
+            <th>Q6 Insurances</th>
+            <th>Renewal Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="text-white">
+                <td>@item.Employee.Name</td>
+
+
+
+                <td> <a href="~/files/images/@item.EmploymentContract" target='_blank' class="text-primary">@item.EmploymentContract</a> </td>
+               
+                <td> <a href="~/files/images/@item.Q1Insurances" target='_blank' class='text-primary'>@item.Q1Insurances</a> </td>
+
+                @*  <td> <img src="~/files/Images/@item.EmploymentContract" alt="Q6Insurances" style="max-width: 200px; max-height: 150px;" /></td>
+                <td> <img src="~/files/Images/@item.Q1Insurances" alt="Q6Insurances" style="max-width: 200px; max-height: 150px;" /></td>
+                 *@
+                <td class="text-center">@item.Q1InsurancesExpireDate.ToShortDateString()</td>
+                <td> <a href="~/files/images/_task.pdf" target='_blank' class='text-primary'>@item.Q6Insurances</a> </td>
+
+               @*  <td> <img src="~/files/Images/@item.Q6Insurances" alt="Q6Insurances" style="max-width: 200px; max-height: 150px;" /></td>
+                 *@
+                <td>@item.RenewalDate.ToShortDateString()</td>
+                <td>
+
+                    <div class="d-flex">
+                        <a asp-action="Update" asp-route-id="@item.InsurancePaperId" class="btn-sm btn-primary me-2 text-decoration-none">Update</a>
+                        
+                        <a asp-action="Delete" asp-route-id="@item.InsurancePaperId" class="btn-sm btn-primary text-decoration-none">Delete</a>
+                    <div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

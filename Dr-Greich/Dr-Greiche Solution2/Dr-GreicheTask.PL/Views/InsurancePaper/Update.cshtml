@@ -1,0 +1,34 @@
+﻿@using Dr_GreicheTask.PL.ViewModels;
+@model InsurancePaperViewModel
+
+<h2>Edit</h2>
+
+<form asp-action="Update"  method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="EmployeeId">Employee</label>
+        <select asp-for="EmployeeId" asp-items="ViewBag.EmployeeList" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label for="EmploymentContract">Employment Contract</label>
+        <input type="file" asp-for="EmploymentContractFile" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Q1Insurances">Q1 Insurances</label>
+        <input type="file" asp-for="Q1InsurancesFile" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Q6Insurances">Q6 Insurances</label>
+        <input type="file" asp-for="Q6InsurancesFile" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Q1InsurancesExpireDate">Q1 Insurances Expire Date</label>
+        <input type="date" asp-for="Q1InsurancesExpireDate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="RenewalDate">Renewal Date</label>
+        <input type="date" asp-for="RenewalDate" class="form-control" />
+    </div>
+    <!-- Other input fields for , Q1 Insurances Expire Date, Q6 Insurances, and Renewal Date -->
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+

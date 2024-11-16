@@ -1,0 +1,66 @@
+﻿@using XceedTask.DAL.Models;
+@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Category Products";
+}
+<h2 class="text-white">Category Products</h2>
+
+<form method="get" action="Filter" >
+    <label for="category">Filter by Category:</label>
+
+    <div class="form-group mb-3">
+        <label for="CategoryId" class="mainColor fw-bold">Filter by Category:</label>
+        <select name="id" Selected="ViewBag.categoryID"  asp-items="ViewBag.category" class="form-control"></select>
+    </div>
+    
+    <button type="submit">Apply Filter</button>
+</form>
+
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>End Date</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Details</th>
+           
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="text-white">
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.EndDate</td>
+                    <td>@item.Price</td>
+                    <td>@item.Category.Name</td>
+                    <td>
+                        <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning">
+                            <i class="fas fa-eye"></i>  Details
+
+                        </a>
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="mt-4 alert alert-warning">
+        <h3>
+            There is no Department!!
+        </h3>
+    </div>
+}

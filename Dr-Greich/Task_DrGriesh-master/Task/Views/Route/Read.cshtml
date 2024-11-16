@@ -1,0 +1,41 @@
+﻿@model List<Routes>
+
+@{
+    ViewData["Title"] = "Read";
+    
+}
+
+<h1>Read</h1>
+
+<table class="table table-bordered table-hover">
+    <td>Code</td>
+    <td>Name</td>
+    <td>Location</td>
+    <td>Email</td>
+    <td>Duration</td>
+    <td>Samples</td>
+    <td></td>
+    <td></td>
+    @foreach (Routes item in Model)
+    {
+        <tr>
+            <td>@item.Code</td>
+            <td>@item.Name</td>
+            <td>@item.Location</td>
+            <td>@item.Email</td>
+            <td>@item.Duration</td>
+            <td><ul>
+                    @foreach (var sample in item.samplesRoutes.Select(sr=>sr.sample))
+                    {
+                        <li>@sample.Name</li>
+                    }
+                </ul></td>
+            <td><a asp-action="edite" asp-controller="route" asp-route-code="@item.Code">Edit</a></td>
+            <td><a asp-action="delete" asp-controller="route" asp-route-code="@item.Code">Delete</a></td>
+
+
+
+        </tr>
+    }
+</table>
+<td><a asp-action="create" asp-controller="route" class="btn btn-primary  mt-3">Create</a></td>

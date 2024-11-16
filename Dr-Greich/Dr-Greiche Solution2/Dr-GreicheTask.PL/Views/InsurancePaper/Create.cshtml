@@ -1,0 +1,34 @@
+﻿@using Dr_GreicheTask.PL.ViewModels;
+@model InsurancePaperViewModel
+
+<div class="bg-white p-4 rounded-2">
+    <h2>Create</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group mb-3">
+        <label for="EmployeeId" class="mainColor fw-bold">Employee</label>
+        <select asp-for="EmployeeId" asp-items="ViewBag.EmployeeList" class="form-control"></select>
+    </div>
+    <div class="form-group mb-3">
+        <label for="EmploymentContract" class="mainColor fw-bold">Employment Contract</label>
+        <input type="file" asp-for="EmploymentContractFile" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label for="Q1Insurances" class="mainColor fw-bold">Q1 Insurances</label>
+        <input type="file" asp-for="Q1InsurancesFile" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label for="Q1InsurancesExpireDate" class="mainColor fw-bold">Q1 Insurances Expire Date</label>
+        <input type="date" asp-for="Q1InsurancesExpireDate" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label for="Q6Insurances" class="mainColor fw-bold">Q6 Insurances</label>
+        <input type="file" asp-for="Q6InsurancesFile" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label for="RenewalDate" class="mainColor fw-bold">Renewal Date</label>
+        <input type="date" asp-for="RenewalDate" class="form-control" />
+    </div>
+    <button type="submit" class="btn mainbg text-white">Create</button>
+</form>
+</div>

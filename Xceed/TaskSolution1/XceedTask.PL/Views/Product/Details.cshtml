@@ -1,0 +1,19 @@
+﻿@using XceedTask.DAL.Models;
+@model Product
+
+@{
+    ViewData["Title"] = " Product Details";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Product Name: @Model.Name</h4>
+    <p>Creation Date: @Model.CreationDate</p>
+    <p>Created By User: @Model.CreatedByUserId</p>
+    <p>Start Date: @Model.StartDate</p>
+    <p>Duration: @Model.EndDate</p>
+    <p>Price: @Model.Price</p>
+   @*  <p>Category: @Model.Category.Name</p> *@
+</div>
+
+<a asp-action="Index">Back to List</a>
